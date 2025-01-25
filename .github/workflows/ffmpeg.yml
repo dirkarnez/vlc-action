@@ -1,0 +1,61 @@
+name: ffmpeg-actions-workflow
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+         id: [1]
+         include:
+          - id: 1
+            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/6f2c042a-7b45-477d-b132-b0af0085d52a/3e1ebc29-e759-4246-a80d-b0af0085d534-a4b804b8-8ca9-467f-9881-b0af009a0b5f.hls/706263/index.m3u8
+    
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      # - name: curl ffmpeg
+      #   shell: cmd
+      #   run: |
+      #     curl https://github.com/GyanD/codexffmpeg/releases/download/6.0/ffmpeg-6.0-full_build-shared.zip -L --output ffmpeg.zip &&^
+      #     7z.exe x ffmpeg.zip
+        
+#       - name: download m3u8
+#         shell: cmd
+#         run: |
+#             set PATH=^
+#             ${{ github.workspace }}\ffmpeg-6.0-full_build\bin;^
+#             %PATH%
+#             mkdir downloads &&^
+#             ffmpeg -http_persistent 0 -protocol_whitelist file,http,https,tcp,tls,crypto -i "${{ github.workspace }}\input.m3u8" "output.mp4" &&^
+#             7z a -tzip -v100m downloads\archive.zip output.mp4 &&^
+#             dir
+
+#           -c:v libx264 -c:a aac \
+  start "" /wait "C:\Program Files\VideoLAN\VLC\vlc.exe" -I dummy --sout=#transcode{vcodec=h264,acodec=mpga,channels=2,samplerate=44100,scodec=none}:file{dst=D:\\12345.mp4}  ${{ matrix.url }}
+      - name: download url with headers
+        shell: bash
+        run: |
+          workspace=$(pwd) && \
+          export PATH="$workspace/ffmpeg-6.0-full_build-shared/bin:$PATH" && \
+          mkdir -p downloads/${{ matrix.id }} && \
+          ffmpeg -http_persistent 1 -i '${{ matrix.url }}' "${{ matrix.id }}.mp4" && \
+          7z a -tzip -v100m downloads/${{ matrix.id }}/${{ matrix.id }}.zip ${{ matrix.id }}.mp4 && \
+          ls
+
+          
+            
+      - uses: actions/upload-artifact@v4.6.0
+        with:
+          name: artifacts-${{ matrix.id }}
+          path: "downloads/${{ matrix.id }}/*"
+          
+#       - name: Release prebuilt
+#         uses: ncipollo/release-action@v1
+#         with:
+#           artifacts: "downloads/*"
+#           allowUpdates: true
+#           token: ${{ secrets.GITHUB_TOKEN }}
+
+

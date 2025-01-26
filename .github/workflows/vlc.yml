@@ -36,7 +36,7 @@ jobs:
   
       - shell: cmd
         run: |
-          start "" /wait "vlc.exe" -I dummy --sout=#transcode{vcodec=h264,acodec=mpga,channels=2,samplerate=44100,scodec=none}:file{dst=${{ matrix.id }}.mp4}  ${{ matrix.url }}
+          start "" /wait "vlc.exe" -I dummy --sout=#transcode{vcodec=h264,acodec=mpga,channels=2,samplerate=44100,scodec=none}:file{dst=${{ matrix.id }}.mp4}  ${{ matrix.url }} vlc://quit
           
       - shell: cmd
         run: |

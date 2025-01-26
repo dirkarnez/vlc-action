@@ -1,4 +1,4 @@
-name: ffmpeg-actions-workflow
+name: vlc-actions-workflow
 on: 
   workflow_dispatch:
 
@@ -15,11 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      # - name: curl ffmpeg
-      #   shell: cmd
-      #   run: |
-      #     curl https://github.com/GyanD/codexffmpeg/releases/download/6.0/ffmpeg-6.0-full_build-shared.zip -L --output ffmpeg.zip &&^
-      #     7z.exe x ffmpeg.zip
+      - name: curl ffmpeg
+        shell: cmd
+        run: |
+          curl https://mirror-hk.koddos.net/videolan/vlc/3.0.21/win64/vlc-3.0.21-win64.exe -L --output installer.exe &&^
+          7z.exe x installer.exe
         
 #       - name: download m3u8
 #         shell: cmd
@@ -33,19 +33,20 @@ jobs:
 #             dir
 
 #           -c:v libx264 -c:a aac \
-  start "" /wait "C:\Program Files\VideoLAN\VLC\vlc.exe" -I dummy --sout=#transcode{vcodec=h264,acodec=mpga,channels=2,samplerate=44100,scodec=none}:file{dst=D:\\12345.mp4}  ${{ matrix.url }}
-      - name: download url with headers
-        shell: bash
+  
+      - shell: cmd
         run: |
-          workspace=$(pwd) && \
-          export PATH="$workspace/ffmpeg-6.0-full_build-shared/bin:$PATH" && \
-          mkdir -p downloads/${{ matrix.id }} && \
-          ffmpeg -http_persistent 1 -i '${{ matrix.url }}' "${{ matrix.id }}.mp4" && \
-          7z a -tzip -v100m downloads/${{ matrix.id }}/${{ matrix.id }}.zip ${{ matrix.id }}.mp4 && \
-          ls
-
+          start "" /wait "vlc.exe" -I dummy --sout=#transcode{vcodec=h264,acodec=mpga,channels=2,samplerate=44100,scodec=none}:file{dst=${{ matrix.id }}.mp4}  ${{ matrix.url }}
           
-            
+      - shell: cmd
+        run: |
+          dir
+          
+      - shell: cmd
+        run: |
+          7z a -tzip -v100m downloads/${{ matrix.id }}/${{ matrix.id }}.zip ${{ matrix.id }}.mp4 && \
+          dir
+          
       - uses: actions/upload-artifact@v4.6.0
         with:
           name: artifacts-${{ matrix.id }}

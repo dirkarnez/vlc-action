@@ -6,8 +6,30 @@ jobs:
   build:
     strategy:
       matrix:
-         id: [lect13]
-         include:
+        id:
+          - ls102
+          - lect2
+          - lect1_rev
+          - lect1
+          - lect2_rev
+          - lect3_rev
+          - lect3_rev2
+          - lect3
+          - lect4
+          - lect4_rev
+          - lect5_2
+          - lect5rev
+          - GMT20231013
+          - ls103
+          - lect7
+          - lect8
+          - lect9
+          - lect10
+          - lect11
+          - lect12
+          - lect13
+          - tut4
+        include:
           - id: lect13
             url: https://s-cloudfront.cdn.ap.panopto.com/sessions/d1754149-409f-4068-b004-b0cb00785f51/a17e36af-085e-479a-9860-b0cb00785f5c-a7c96924-d76b-4716-8cf7-b0cb007b5064.hls/837122/index.m3u8
             

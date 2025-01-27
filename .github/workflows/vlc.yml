@@ -6,11 +6,8 @@ jobs:
   build:
     strategy:
       matrix:
-         id: [1]
+         id: [lect13]
          include:
-          - id: 1
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/6f2c042a-7b45-477d-b132-b0af0085d52a/3e1ebc29-e759-4246-a80d-b0af0085d534-a4b804b8-8ca9-467f-9881-b0af009a0b5f.hls/706263/index.m3u8
-            
           - id: lect13
             url: https://s-cloudfront.cdn.ap.panopto.com/sessions/d1754149-409f-4068-b004-b0cb00785f51/a17e36af-085e-479a-9860-b0cb00785f5c-a7c96924-d76b-4716-8cf7-b0cb007b5064.hls/837122/index.m3u8
             
@@ -56,7 +53,7 @@ jobs:
           - id: lect4
             url: https://s-cloudfront.cdn.ap.panopto.com/sessions/4f860ece-cfc8-4646-8a7b-b08e0098e631/055af52a-d938-4531-bfd4-b08e0098e63b-ac959f98-0259-4510-84ae-b08e00a2ec97.hls/506083/index.m3u8
 
-          - id: lect3_rev
+          - id: lect3_rev2
             url: https://s-cloudfront.cdn.ap.panopto.com/sessions/22cfab2e-7be4-4d57-8088-b08b00989294/e5299c7b-8ec4-4832-93e0-b08b0098929a-bba08d6a-3b2e-449b-8a91-b08b009f59c3.hls/1808860/index.m3u8
 
           - id: lect3
@@ -76,8 +73,6 @@ jobs:
             
           - id: tut4
             url: https://s-cloudfront.cdn.ap.panopto.com/sessions/cd1593c5-9eb4-4475-8089-b0bf011f2845/85c94d1a-debc-4c81-bd9e-b0bf011f2858-54072f9c-4850-401f-b08d-b0bf01232190.hls/474764/index.m3u8
-
-
 
     
     runs-on: windows-latest

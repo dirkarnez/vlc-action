@@ -7,94 +7,98 @@ jobs:
     strategy:
       matrix:
         id:
-          - ls102
-          - lect2
-          - lect1_rev
-          - lect1
-          - lect2_rev
-          - lect3_rev
-          - lect3_rev2
-          - lect3
-          - lect4
-          - lect4_rev
-          - lect5_2
-          - lect5rev
-          - GMT20231013
-          - ls103
-          - lect7
-          - lect8
-          - lect9
-          - lect10
-          - lect11
-          - lect12
-          - lect13
-          - tut4
+          - abc
+          # - ls102
+          # - lect2
+          # - lect1_rev
+          # - lect1
+          # - lect2_rev
+          # - lect3_rev
+          # - lect3_rev2
+          # - lect3
+          # - lect4
+          # - lect4_rev
+          # - lect5_2
+          # - lect5rev
+          # - GMT20231013
+          # - ls103
+          # - lect7
+          # - lect8
+          # - lect9
+          # - lect10
+          # - lect11
+          # - lect12
+          # - lect13
+          # - tut4
         include:
-          - id: lect13
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/d1754149-409f-4068-b004-b0cb00785f51/a17e36af-085e-479a-9860-b0cb00785f5c-a7c96924-d76b-4716-8cf7-b0cb007b5064.hls/837122/index.m3u8
+          - id: abc
+            url: https://v3.tlkqc.com/wjv3/202503/28/DP7tGW07MU75/video/1000k_720/hls/index.m3u8
             
-          - id: lect12
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/be7cd5e3-c8db-4bdd-b898-b0c400827c77/a087bf7b-5605-4814-a910-b0c400827c7f-f90af942-e640-4bf9-8cc2-b0c40092b952.hls/703855/index.m3u8
+          # - id: lect13
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/d1754149-409f-4068-b004-b0cb00785f51/a17e36af-085e-479a-9860-b0cb00785f5c-a7c96924-d76b-4716-8cf7-b0cb007b5064.hls/837122/index.m3u8
             
-          - id: lect11
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/24d5c22d-1691-4ca2-b855-b0bd00822cea/c138b4a0-bb0a-4973-bed7-b0bd00822cf5-2b3ed009-762f-4b1d-ac25-b0bd00922235.hls/762313/index.m3u8
+          # - id: lect12
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/be7cd5e3-c8db-4bdd-b898-b0c400827c77/a087bf7b-5605-4814-a910-b0c400827c7f-f90af942-e640-4bf9-8cc2-b0c40092b952.hls/703855/index.m3u8
+            
+          # - id: lect11
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/24d5c22d-1691-4ca2-b855-b0bd00822cea/c138b4a0-bb0a-4973-bed7-b0bd00822cf5-2b3ed009-762f-4b1d-ac25-b0bd00922235.hls/762313/index.m3u8
 
-          - id: lect10
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/8b170470-91a1-49ef-bdc0-b0b6008535b5/1809cebf-2205-4316-b0dd-b0b6008535bf-2d403578-9c08-4a81-ae9e-b0b6009650a2.hls/735199/index.m3u8
+          # - id: lect10
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/8b170470-91a1-49ef-bdc0-b0b6008535b5/1809cebf-2205-4316-b0dd-b0b6008535bf-2d403578-9c08-4a81-ae9e-b0b6009650a2.hls/735199/index.m3u8
           
-          - id: lect9
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/6f2c042a-7b45-477d-b132-b0af0085d52a/3e1ebc29-e759-4246-a80d-b0af0085d534-a4b804b8-8ca9-467f-9881-b0af009a0b5f.hls/706263/index.m3u8
+          # - id: lect9
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/6f2c042a-7b45-477d-b132-b0af0085d52a/3e1ebc29-e759-4246-a80d-b0af0085d534-a4b804b8-8ca9-467f-9881-b0af009a0b5f.hls/706263/index.m3u8
 
-          - id: lect8
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/96f529d9-0457-42d2-9de5-b0a800874c5d/657d1c2a-714c-4330-b555-b0a800874c67-0668e437-e6f1-48ab-9af5-b0a8009730fc.hls/722493/index.m3u8
+          # - id: lect8
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/96f529d9-0457-42d2-9de5-b0a800874c5d/657d1c2a-714c-4330-b555-b0a800874c67-0668e437-e6f1-48ab-9af5-b0a8009730fc.hls/722493/index.m3u8
 
-          - id: lect7
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/a5345355-a764-4881-b5fd-b0a10083f18a/5010c699-063a-4ffe-99bf-b0a10083f193-18cba7c6-18ab-4df5-9ef0-b0a1008b5a06.hls/725360/index.m3u8
+          # - id: lect7
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/a5345355-a764-4881-b5fd-b0a10083f18a/5010c699-063a-4ffe-99bf-b0a10083f193-18cba7c6-18ab-4df5-9ef0-b0a1008b5a06.hls/725360/index.m3u8
 
-          - id: ls103
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/df78b7e2-678c-4f1c-806c-b09e0102f13a/6c37ef82-daaf-4ca0-bc01-b09e0102f145-273a323f-e8ad-4524-9a60-b09e010381f7.hls/448789/index.m3u8
+          # - id: ls103
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/df78b7e2-678c-4f1c-806c-b09e0102f13a/6c37ef82-daaf-4ca0-bc01-b09e0102f145-273a323f-e8ad-4524-9a60-b09e010381f7.hls/448789/index.m3u8
             
-          - id: GMT20231013
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/0b2f6845-8239-4ab0-866c-b09a0087b498/fb3777e3-4871-4f22-aa1b-b09a0087b4a3-3d491d02-1053-40b6-9658-b09a0094488b.hls/694324/index.m3u8
+          # - id: GMT20231013
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/0b2f6845-8239-4ab0-866c-b09a0087b498/fb3777e3-4871-4f22-aa1b-b09a0087b4a3-3d491d02-1053-40b6-9658-b09a0094488b.hls/694324/index.m3u8
 
-          - id: lect5rev
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/03c9018e-0d9e-48b6-a2ed-b0990101f7be/3cc8aff5-a1db-404a-956c-b0990101f7c7-e3172f76-4f29-40ec-ab52-b0990103a0ca.hls/633068/index.m3u8
+          # - id: lect5rev
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/03c9018e-0d9e-48b6-a2ed-b0990101f7be/3cc8aff5-a1db-404a-956c-b0990101f7c7-e3172f76-4f29-40ec-ab52-b0990103a0ca.hls/633068/index.m3u8
             
-          - id: lect5_2
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/c3984fef-651e-46e5-a666-b09901013c2e/6c4dc119-e012-43ad-a9f8-b09901013c3a-f3000918-f8e2-4883-8ae9-b099010255db.hls/602584/index.m3u8
+          # - id: lect5_2
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/c3984fef-651e-46e5-a666-b09901013c2e/6c4dc119-e012-43ad-a9f8-b09901013c3a-f3000918-f8e2-4883-8ae9-b099010255db.hls/602584/index.m3u8
 
-          - id: lect4_rev
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/1efe0757-ad51-4cf9-9bba-b0920118ab90/da449877-8a91-4419-9a52-b0920118ab9b-ac8d9164-0618-498d-a8b3-b092011a10a2.hls/365129/index.m3u8
+          # - id: lect4_rev
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/1efe0757-ad51-4cf9-9bba-b0920118ab90/da449877-8a91-4419-9a52-b0920118ab9b-ac8d9164-0618-498d-a8b3-b092011a10a2.hls/365129/index.m3u8
 
-          - id: lect3_rev
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/4c041a54-7e0b-49cb-9bbc-b09200d0ebb9/762c9362-5b3e-4d07-9cf6-b09200d0ebc4-82fd42cb-270d-4084-9ffd-b09200d2c944.hls/558854/index.m3u8
+          # - id: lect3_rev
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/4c041a54-7e0b-49cb-9bbc-b09200d0ebb9/762c9362-5b3e-4d07-9cf6-b09200d0ebc4-82fd42cb-270d-4084-9ffd-b09200d2c944.hls/558854/index.m3u8
 
-          - id: ls102
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/3e80b719-6979-4d2e-9e65-b08f00f0bd67/0c048837-7f0a-43ff-91b4-b08f00f0bd70-5d034ad7-eb98-49ef-95de-b08f00f18f45.hls/398727/index.m3u8
+          # - id: ls102
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/3e80b719-6979-4d2e-9e65-b08f00f0bd67/0c048837-7f0a-43ff-91b4-b08f00f0bd70-5d034ad7-eb98-49ef-95de-b08f00f18f45.hls/398727/index.m3u8
 
-          - id: lect4
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/4f860ece-cfc8-4646-8a7b-b08e0098e631/055af52a-d938-4531-bfd4-b08e0098e63b-ac959f98-0259-4510-84ae-b08e00a2ec97.hls/506083/index.m3u8
+          # - id: lect4
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/4f860ece-cfc8-4646-8a7b-b08e0098e631/055af52a-d938-4531-bfd4-b08e0098e63b-ac959f98-0259-4510-84ae-b08e00a2ec97.hls/506083/index.m3u8
 
-          - id: lect3_rev2
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/22cfab2e-7be4-4d57-8088-b08b00989294/e5299c7b-8ec4-4832-93e0-b08b0098929a-bba08d6a-3b2e-449b-8a91-b08b009f59c3.hls/1808860/index.m3u8
+          # - id: lect3_rev2
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/22cfab2e-7be4-4d57-8088-b08b00989294/e5299c7b-8ec4-4832-93e0-b08b0098929a-bba08d6a-3b2e-449b-8a91-b08b009f59c3.hls/1808860/index.m3u8
 
-          - id: lect3
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/6bb5512b-215a-415a-9e69-b08700fdb7f1/91b53668-41e3-4c44-8e8f-b08700fdb7fa-121318eb-900b-4206-9af7-b0870109da0c.hls/505452/index.m3u8
+          # - id: lect3
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/6bb5512b-215a-415a-9e69-b08700fdb7f1/91b53668-41e3-4c44-8e8f-b08700fdb7fa-121318eb-900b-4206-9af7-b0870109da0c.hls/505452/index.m3u8
 
-          - id: lect2_rev
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/a8d37cb3-936f-4a25-823d-b08300a3b024/d9d54c95-7b63-431a-b76b-b08300a3b02e-54309d1e-9a9f-419b-8165-b08300a54135.hls/611189/index.m3u8
+          # - id: lect2_rev
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/a8d37cb3-936f-4a25-823d-b08300a3b024/d9d54c95-7b63-431a-b76b-b08300a3b02e-54309d1e-9a9f-419b-8165-b08300a54135.hls/611189/index.m3u8
 
-          - id: lect2
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/5365844e-9891-4ab0-8be7-b08100ea3dcd/2e83442f-3dd1-4673-95e2-b08100ea3dde-1394fc82-9eb4-4b53-b816-b08100f41eb7.hls/531986/index.m3u8
+          # - id: lect2
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/5365844e-9891-4ab0-8be7-b08100ea3dcd/2e83442f-3dd1-4673-95e2-b08100ea3dde-1394fc82-9eb4-4b53-b816-b08100f41eb7.hls/531986/index.m3u8
 
-          - id: lect1_rev
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/0ecd1ce8-5aa0-441c-a9b9-b07d00ffe70d/f25335a5-eb88-43c5-b513-b07d00ffe717-54ef707c-03ee-41f2-9ed6-b07d0100f194.hls/515197/index.m3u8
+          # - id: lect1_rev
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/0ecd1ce8-5aa0-441c-a9b9-b07d00ffe70d/f25335a5-eb88-43c5-b513-b07d00ffe717-54ef707c-03ee-41f2-9ed6-b07d0100f194.hls/515197/index.m3u8
 
-          - id: lect1
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/5815298b-9180-4bd6-96e4-b0780034e427/f5dcb0f1-0710-4b39-a634-b0780034e42f-9f88f4fa-5fea-4241-88ee-b07800408e27.hls/784293/index.m3u8
+          # - id: lect1
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/5815298b-9180-4bd6-96e4-b0780034e427/f5dcb0f1-0710-4b39-a634-b0780034e42f-9f88f4fa-5fea-4241-88ee-b07800408e27.hls/784293/index.m3u8
             
-          - id: tut4
-            url: https://s-cloudfront.cdn.ap.panopto.com/sessions/cd1593c5-9eb4-4475-8089-b0bf011f2845/85c94d1a-debc-4c81-bd9e-b0bf011f2858-54072f9c-4850-401f-b08d-b0bf01232190.hls/474764/index.m3u8
+          # - id: tut4
+          #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/cd1593c5-9eb4-4475-8089-b0bf011f2845/85c94d1a-debc-4c81-bd9e-b0bf011f2858-54072f9c-4850-401f-b08d-b0bf01232190.hls/474764/index.m3u8
 
     
     runs-on: windows-latest

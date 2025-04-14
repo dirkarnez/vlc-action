@@ -135,7 +135,7 @@ jobs:
           
       - shell: cmd
         run: |
-          7z a -tzip -v100m downloads/${{ matrix.id }}/${{ matrix.id }}.zip ${{ matrix.id }}.mp4 && \
+          7z a -tzip -v100m downloads/${{ matrix.id }}/${{ matrix.id }}.zip ${{ matrix.id }}.mp4 &&^
           dir
           
       - uses: actions/upload-artifact@v4.6.0

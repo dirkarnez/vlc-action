@@ -32,7 +32,7 @@ jobs:
           # - tut4
         include:
           - id: abc
-            url: https://v3.tlkqc.com/wjv3/202503/28/DP7tGW07MU75/video/1000k_720/hls/index.m3u8
+            url: https://v2.qrssv.com/202503/28/1x8s0veaNR19/video/2000k_1080/hls/index.m3u8
             
           # - id: lect13
           #   url: https://s-cloudfront.cdn.ap.panopto.com/sessions/d1754149-409f-4068-b004-b0cb00785f51/a17e36af-085e-479a-9860-b0cb00785f5c-a7c96924-d76b-4716-8cf7-b0cb007b5064.hls/837122/index.m3u8

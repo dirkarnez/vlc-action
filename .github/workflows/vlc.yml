@@ -125,9 +125,10 @@ jobs:
 #           -c:v libx264 -c:a aac \
 
   #  -I dummy
+  # :sout=#transcode{vcodec=h264,acodec=mpga,ab=128,channels=2,samplerate=44100,scodec=none} :sout-all :sout-keep
       - shell: cmd
         run: |
-          start "" /wait "vlc.exe" --sout=#transcode{vcodec=h264,acodec=mp3}:file{dst=${{ matrix.id }}.mp4}  ${{ matrix.url }} vlc://quit
+          start "" /wait "vlc.exe" --sout=#transcode{vcodec=h264,acodec=mp3}:file{dst=${{ matrix.id }}.mp4} ${{ matrix.url }} vlc://quit
           
       - shell: cmd
         run: |

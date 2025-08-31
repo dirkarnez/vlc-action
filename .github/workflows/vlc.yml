@@ -6,7 +6,7 @@ jobs:
   build:
     strategy:
       matrix:
-         id: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+         id: [21,22,23]
          include:
          - id: 1
            name: EIE3312 Lecture 1.mp4
@@ -106,7 +106,7 @@ jobs:
   # :sout=#transcode{vcodec=h264,acodec=mpga,ab=128,channels=2,samplerate=44100,scodec=none} :sout-all :sout-keep
       - shell: cmd
         run: |
-          start "" /wait "vlc.exe" --sout=#transcode{vcodec=h264,vb=1500,scale=Auto,acodec=mp3,ab=320,channels=2,samplerate=44100}:std{access=file{no-overwrite},mux=mp4,dst=&#39;${{ matrix.name }}&#39;} ${{ matrix.url }} vlc://quit
+          start "" /wait "vlc.exe" --sout=#transcode{vcodec=h264,vb=1500,scale=Auto,acodec=mp3,ab=320,channels=2,samplerate=44100}:std{access=file{no-overwrite},mux=mp4.dst="${{ matrix.name }}"} ${{ matrix.url }} vlc://quit
           
       - shell: cmd
         run: |
